@@ -6,14 +6,22 @@ import lombok.Setter;
 import java.util.UUID;
 
 @Getter
+@Setter
 public class Question {
-    private final UUID id;
-    @Setter
+    private UUID id;
     private String message;
-    @Setter
     private Type type;
 
-    public Question(UUID id){
-        this.id = id;
+    public Question(){
+        this.id = UUID.randomUUID();
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", type=" + type +
+                '}';
     }
 }
