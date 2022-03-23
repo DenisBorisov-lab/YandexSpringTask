@@ -1,5 +1,6 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,16 +9,19 @@ import java.util.List;
 import java.util.UUID;
 
 @Getter
-@Setter
 public class Quiz {
 
-//    private LocalDateTime start;
-//    private UUID id;
-//    @Setter
-//    private String name;
-//    @Setter
-//    private LocalDateTime end;
-//    @Setter
-//    private List<Question> questions;\
-    private String text;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = JsonFormat.DEFAULT_TIMEZONE)
+    private LocalDateTime start;
+    private final UUID id;
+    @Setter
+    private String name;
+    @Setter
+    private LocalDateTime end;
+    @Setter
+    private List<Question> questions;
+
+    public Quiz(UUID id) {
+        this.id = id;
+    }
 }

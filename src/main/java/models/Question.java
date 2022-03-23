@@ -6,10 +6,11 @@ import lombok.Setter;
 import java.util.UUID;
 
 @Getter
-@Setter
 public class Question {
     private final UUID id;
+    @Setter
     private String message;
+    @Setter
     private Type type;
 
     public Question(UUID id){
