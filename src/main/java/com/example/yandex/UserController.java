@@ -1,9 +1,11 @@
 package com.example.yandex;
 
 import models.RunQuizApplication;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@Controller
 public class UserController {
 
     @GetMapping("/get_quizzes")
@@ -17,8 +19,8 @@ public class UserController {
         return "run";
     }
 
-    @GetMapping("/get_statistics/{id}")
-    public String getStatistics(@PathVariable Long id) {
+    @GetMapping("/get_statistics/{id}/{name}")
+    public String getStatistics(@PathVariable Long id, String name) {
         return "ok";
     }
 }

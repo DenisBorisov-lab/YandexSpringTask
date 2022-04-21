@@ -9,5 +9,5 @@ import java.util.UUID;
 public class EditQuizApplication {
     private UUID id;
     private String name;
-    private List<Question> questions;
+    private List<QuestionDto> questionDtos;
 }
