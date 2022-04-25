@@ -1,4 +1,4 @@
-package models;
+package com.example.yandex.models;
 
 import lombok.Getter;
 

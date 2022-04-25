@@ -1,1 +1,62 @@
-[{"name":"Яндекс еда","questions":null,"start"
+[
+  {
+    "id": "1d0de608-8c51-4d6f-b293-222bbc911478",
+    "name": "name",
+    "questions": [
+      {
+        "message": "message",
+        "type": "CHECKBOX"
+      },
+      {
+        "message": "message",
+        "type": "CHECKBOX"
+      }
+    ],
+    "start": [
+      2022,
+      4,
+      17,
+      20,
+      33,
+      36
+    ],
+    "end": [
+      2022,
+      4,
+      17,
+      20,
+      33,
+      36
+    ]
+  },
+  {
+    "id": "94c2bc8c-f2cb-43e4-b4d4-9eb1afe7eb1a",
+    "name": "name",
+    "questions": [
+      {
+        "message": "message",
+        "type": "CHECKBOX"
+      },
+      {
+        "message": "message",
+        "type": "CHECKBOX"
+      }
+    ],
+    "start": [
+      2022,
+      4,
+      17,
+      20,
+      33,
+      36
+    ],
+    "end": [
+      2022,
+      4,
+      17,
+      20,
+      33,
+      36
+    ]
+  }
+]

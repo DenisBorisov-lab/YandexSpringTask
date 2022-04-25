@@ -1,6 +1,6 @@
-package com.example.yandex;
+package com.example.yandex.controllers;
 
-import models.RunQuizApplication;
+import com.example.yandex.models.RunQuizApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

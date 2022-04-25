@@ -1,0 +1,14 @@
+{
+  "id": "2fc346a6-7a55-4436-9de1-0beaa0553e2e",
+  "name": "test",
+  "questions": [
+    {
+      "message": "опрос для школьников",
+      "type": "CHECKBOX"
+    },
+    {
+      "message": "опрос для школьников",
+      "type": "CHECKBOX"
+    }
+  ]
+}
