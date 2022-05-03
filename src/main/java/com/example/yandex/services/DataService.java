@@ -60,6 +60,7 @@ public class DataService {
             if (quiz.getId().equals(id)){
                 isExist = true;
                 data.remove(quiz);
+                break;
             }
         }
 
@@ -73,7 +74,12 @@ public class DataService {
 
     @SneakyThrows
     public void writeData() {
-        mapper.writeValue(new File("./src/main/resources/data.json"), data);
+        try{
+            mapper.writeValue(new File("./src/main/resources/data.json"), data);
+        }catch(Exception ex){
+            System.out.println("не получилось записать в файл");
+        }
+
     }
 
     @SneakyThrows

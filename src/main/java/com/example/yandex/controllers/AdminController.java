@@ -1,18 +1,17 @@
 package com.example.yandex.controllers;
 
-import com.example.yandex.models.EditQuestionApplication;
 import com.example.yandex.models.dto.DeleteQuizDto;
 import com.example.yandex.models.dto.EditQuizDto;
 import com.example.yandex.models.dto.QuestionDto;
 import com.example.yandex.models.dto.QuizDto;
 import com.example.yandex.services.DataService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.UUID;
@@ -22,6 +21,7 @@ public class AdminController {
 
     @Autowired
     private DataService dataService;
+
 
     @PostMapping("/add_quiz")
     @ResponseBody
@@ -63,7 +63,7 @@ public class AdminController {
 
     @PostMapping("/edit_question")
     @ResponseBody
-    public String edit_question(@RequestBody EditQuestionApplication application) {
+    public String edit_question() {
         return "ok";
     }
 

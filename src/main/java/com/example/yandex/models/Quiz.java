@@ -1,15 +1,16 @@
 package com.example.yandex.models;
 
 import com.example.yandex.models.dto.QuestionDto;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Quiz {
     private UUID id;
     private String name;
