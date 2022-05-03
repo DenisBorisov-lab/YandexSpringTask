@@ -1,11 +1,11 @@
 package com.example.yandex.services;
 
+import com.example.yandex.models.Quiz;
+import com.example.yandex.models.dto.EditQuizDto;
+import com.example.yandex.models.dto.QuizDto;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
-import com.example.yandex.models.dto.EditQuizDto;
-import com.example.yandex.models.Quiz;
-import com.example.yandex.models.dto.QuizDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -56,27 +56,27 @@ public class DataService {
     public boolean deleteQuiz(UUID id) {
         readValue();
         boolean isExist = false;
-        for (Quiz quiz : data){
-            if (quiz.getId().equals(id)){
+        for (Quiz quiz : data) {
+            if (quiz.getId().equals(id)) {
                 isExist = true;
                 data.remove(quiz);
                 break;
             }
         }
 
-        if(isExist){
+        if (isExist) {
             writeData();
             return isExist;
-        }else{
+        } else {
             return false;
         }
     }
 
     @SneakyThrows
     public void writeData() {
-        try{
+        try {
             mapper.writeValue(new File("./src/main/resources/data.json"), data);
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println("не получилось записать в файл");
         }
 

@@ -1,6 +1,5 @@
 package com.example.yandex.models.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
