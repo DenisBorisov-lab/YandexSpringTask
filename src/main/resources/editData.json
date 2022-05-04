@@ -4,11 +4,11 @@
   "questions": [
     {
       "message": "опрос для школьников",
-      "type": "CHECKBOX"
+      "correctAnswer": "CHECKBOX"
     },
     {
       "message": "опрос для школьников",
-      "type": "CHECKBOX"
+      "correctAnswer": "CHECKBOX"
     }
   ]
 }

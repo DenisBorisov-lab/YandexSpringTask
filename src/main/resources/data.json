@@ -1,31 +1,67 @@
 [
   {
-    "id": "d91fd009-eb1c-4f40-bcda-dbf9b8986528",
+    "id": "1da2df33-68a7-4b2d-add5-9142488f6241",
     "name": "name",
     "questions": [
       {
         "message": "message",
-        "type": "CHECKBOX"
+        "correctAnswer": "CHECKBOX"
       },
       {
         "message": "message",
-        "type": "CHECKBOX"
+        "correctAnswer": "CHECKBOX"
+      },
+      {
+        "message": "Сколько яблок было у Вани?",
+        "correctAnswer": "6"
       }
     ],
     "start": "2022-04-17T20:33:36",
     "end": "2022-04-17T20:33:36"
   },
   {
-    "id": "484740c6-f2ee-4ede-a20c-fc110b530ebc",
+    "id": "b232bb31-7df7-4675-951e-5fa432b38e3a",
     "name": "name",
     "questions": [
       {
         "message": "message",
-        "type": "CHECKBOX"
+        "correctAnswer": "CHECKBOX"
       },
       {
         "message": "message",
-        "type": "CHECKBOX"
+        "correctAnswer": "CHECKBOX"
+      }
+    ],
+    "start": "2022-04-17T20:33:36",
+    "end": "2022-04-17T20:33:36"
+  },
+  {
+    "id": "cac767d2-0c11-4ca1-a285-ee37e5e19c5b",
+    "name": "name",
+    "questions": [
+      {
+        "message": "message",
+        "correctAnswer": "CHECKBOX"
+      },
+      {
+        "message": "message",
+        "correctAnswer": 7
+      }
+    ],
+    "start": "2022-04-17T20:33:36",
+    "end": "2022-04-17T20:33:36"
+  },
+  {
+    "id": "8d6331f2-b766-4d1c-afa2-b19f36a16ff9",
+    "name": "name",
+    "questions": [
+      {
+        "message": "message",
+        "correctAnswer": "CHECKBOX"
+      },
+      {
+        "message": "message",
+        "correctAnswer": "CHECKBOX"
       }
     ],
     "start": "2022-04-17T20:33:36",

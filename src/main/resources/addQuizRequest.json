@@ -1,14 +1,14 @@
 [
   {
     "name": "name",
-    "questionDtos": [
+    "questions": [
       {
         "message": "message",
-        "type": "CHECKBOX"
+        "correctAnswer": "CHECKBOX"
       },
       {
         "message": "message",
-        "type": "CHECKBOX"
+        "correctAnswer": "CHECKBOX"
       }
     ],
     "start": "2022-04-17T20:33:36",
@@ -16,14 +16,14 @@
   },
   {
     "name": "name",
-    "questionDtos": [
+    "questions": [
       {
         "message": "message",
-        "type": "CHECKBOX"
+        "correctAnswer": "CHECKBOX"
       },
       {
         "message": "message",
-        "type": "CHECKBOX"
+        "correctAnswer": "CHECKBOX"
       }
     ],
     "start": "2022-04-17T20:33:36",

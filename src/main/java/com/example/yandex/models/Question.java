@@ -5,19 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Quiz {
+public class Question <T> {
     private UUID id;
-    private String name;
-    private List<Question> questions;
-    private LocalDateTime start;
-    private LocalDateTime end;
-
+    private String message;
+    private T correctAnswer;
 }

@@ -1,9 +1,6 @@
 package com.example.yandex.controllers;
 
-import com.example.yandex.models.dto.DeleteQuizDto;
-import com.example.yandex.models.dto.EditQuizDto;
-import com.example.yandex.models.dto.QuestionDto;
-import com.example.yandex.models.dto.QuizDto;
+import com.example.yandex.models.dto.*;
 import com.example.yandex.services.DataService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,19 +53,35 @@ public class AdminController {
 
     @PostMapping("/add_question")
     @ResponseBody
-    public String add_question(@RequestBody QuestionDto questionDto) {
-        return "ok";
+    public String add_question(@RequestBody QuestionsDto questionDtos) {
+        boolean result = dataService.addQuestions(questionDtos);
+        if (result) {
+            return "ok";
+        } else {
+            return "такого опроса не было найдено";
+        }
     }
 
     @PostMapping("/edit_question")
     @ResponseBody
-    public String edit_question() {
-        return "ok";
+    public String edit_question(@RequestBody EditQuestionDto editQuestionDto) {
+        boolean result = dataService.editQuestion(editQuestionDto);
+        if (result){
+            return "ok";
+        }else{
+            return "Не удалось изменить вопрос!";
+        }
+
     }
 
     @PostMapping("/delete_question")
     @ResponseBody
-    public String delete_question(@RequestBody String id) {
-        return id;
+    public String delete_question(@RequestBody DeleteQuestionDto deleteQuestionDto) {
+        boolean result = dataService.deleteQuestion(deleteQuestionDto);
+        if (result){
+            return "ok";
+        }else{
+            return "Не получилось удалить вопрос";
+        }
     }
 }
