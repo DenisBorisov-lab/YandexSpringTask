@@ -15,4 +15,5 @@ public class Question <T> {
     private UUID id;
     private String message;
     private T correctAnswer;
+    private Type type;
 }

@@ -1,5 +1,10 @@
 {
   "quizId": "",
-  "message": "Сколько яблок было у Вани?",
-  "correctAnswer": "6"
+  "questions": [
+    {
+      "message": "Сколько хромомсом у Ярика и Миши месте?",
+      "correctAnswer": "46+1",
+      "type": "TEXT"
+    }
+  ]
 }

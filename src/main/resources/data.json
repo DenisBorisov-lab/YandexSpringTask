@@ -1,67 +1,39 @@
 [
   {
-    "id": "1da2df33-68a7-4b2d-add5-9142488f6241",
+    "id": "73b19a4e-3b70-401a-ad10-cea73a359e5b",
     "name": "name",
     "questions": [
       {
+        "id": "9e95166e-9987-49bb-8ba5-b3b9f4bdb980",
         "message": "message",
-        "correctAnswer": "CHECKBOX"
+        "correctAnswer": "CHECKBOX",
+        "type": "CHECKBOX"
       },
       {
+        "id": "705fe9fb-be88-456e-8dce-aa667dcfc4b7",
         "message": "message",
-        "correctAnswer": "CHECKBOX"
-      },
-      {
-        "message": "Сколько яблок было у Вани?",
-        "correctAnswer": "6"
+        "correctAnswer": "CHECKBOX",
+        "type": "TEXT"
       }
     ],
     "start": "2022-04-17T20:33:36",
     "end": "2022-04-17T20:33:36"
   },
   {
-    "id": "b232bb31-7df7-4675-951e-5fa432b38e3a",
+    "id": "cfc42ba7-67fb-4211-af86-591e4a355342",
     "name": "name",
     "questions": [
       {
+        "id": "7350aae7-d15d-44bc-97b7-228cbcac57e8",
         "message": "message",
-        "correctAnswer": "CHECKBOX"
+        "correctAnswer": "CHECKBOX",
+        "type": "TEXT"
       },
       {
+        "id": "71240983-d92f-41d7-9c58-976581a7e16a",
         "message": "message",
-        "correctAnswer": "CHECKBOX"
-      }
-    ],
-    "start": "2022-04-17T20:33:36",
-    "end": "2022-04-17T20:33:36"
-  },
-  {
-    "id": "cac767d2-0c11-4ca1-a285-ee37e5e19c5b",
-    "name": "name",
-    "questions": [
-      {
-        "message": "message",
-        "correctAnswer": "CHECKBOX"
-      },
-      {
-        "message": "message",
-        "correctAnswer": 7
-      }
-    ],
-    "start": "2022-04-17T20:33:36",
-    "end": "2022-04-17T20:33:36"
-  },
-  {
-    "id": "8d6331f2-b766-4d1c-afa2-b19f36a16ff9",
-    "name": "name",
-    "questions": [
-      {
-        "message": "message",
-        "correctAnswer": "CHECKBOX"
-      },
-      {
-        "message": "message",
-        "correctAnswer": "CHECKBOX"
+        "correctAnswer": "CHECKBOX",
+        "type": "SELECT_BOX"
       }
     ],
     "start": "2022-04-17T20:33:36",

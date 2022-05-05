@@ -3,10 +3,12 @@
     "name": "name",
     "questions": [
       {
+        "type": "CHECKBOX",
         "message": "message",
         "correctAnswer": "CHECKBOX"
       },
       {
+        "type": "TEXT",
         "message": "message",
         "correctAnswer": "CHECKBOX"
       }
@@ -18,10 +20,12 @@
     "name": "name",
     "questions": [
       {
+        "type": "TEXT",
         "message": "message",
         "correctAnswer": "CHECKBOX"
       },
       {
+        "type": "SELECT_BOX",
         "message": "message",
         "correctAnswer": "CHECKBOX"
       }

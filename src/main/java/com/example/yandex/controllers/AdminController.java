@@ -1,7 +1,7 @@
 package com.example.yandex.controllers;
 
 import com.example.yandex.models.dto.*;
-import com.example.yandex.services.DataService;
+import com.example.yandex.services.AdminService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,21 +16,21 @@ import java.util.UUID;
 public class AdminController {
 
     @Autowired
-    private DataService dataService;
+    private AdminService adminService;
 
 
     @PostMapping("/add_quiz")
     @ResponseBody
     @SneakyThrows
     public String addQuiz(@RequestBody List<QuizDto> quizzes) {
-        dataService.addQuiz(quizzes);
+        adminService.addQuiz(quizzes);
         return "ok";
     }
 
     @PostMapping("/edit_quiz")
     @ResponseBody
     public String editQuiz(@RequestBody EditQuizDto application) {
-        boolean result = dataService.editQuiz(application);
+        boolean result = adminService.editQuiz(application);
         if (result) {
             return "ok";
         } else {
@@ -43,7 +43,7 @@ public class AdminController {
     @ResponseBody
     public String deleteQuiz(@RequestBody DeleteQuizDto deleteQuizDto) {
         UUID id = deleteQuizDto.getId();
-        boolean result = dataService.deleteQuiz(id);
+        boolean result = adminService.deleteQuiz(id);
         if (result) {
             return "ок";
         } else {
@@ -54,7 +54,7 @@ public class AdminController {
     @PostMapping("/add_question")
     @ResponseBody
     public String add_question(@RequestBody QuestionsDto questionDtos) {
-        boolean result = dataService.addQuestions(questionDtos);
+        boolean result = adminService.addQuestions(questionDtos);
         if (result) {
             return "ok";
         } else {
@@ -65,7 +65,7 @@ public class AdminController {
     @PostMapping("/edit_question")
     @ResponseBody
     public String edit_question(@RequestBody EditQuestionDto editQuestionDto) {
-        boolean result = dataService.editQuestion(editQuestionDto);
+        boolean result = adminService.editQuestion(editQuestionDto);
         if (result){
             return "ok";
         }else{
@@ -77,7 +77,7 @@ public class AdminController {
     @PostMapping("/delete_question")
     @ResponseBody
     public String delete_question(@RequestBody DeleteQuestionDto deleteQuestionDto) {
-        boolean result = dataService.deleteQuestion(deleteQuestionDto);
+        boolean result = adminService.deleteQuestion(deleteQuestionDto);
         if (result){
             return "ok";
         }else{
