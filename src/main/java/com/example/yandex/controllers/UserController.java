@@ -1,8 +1,12 @@
 package com.example.yandex.controllers;
+
+import com.example.yandex.models.dto.RunQuizDto;
 import com.example.yandex.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -11,18 +15,20 @@ public class UserController {
     private PersonService personService;
 
     @GetMapping("/get_quizzes")
-    public String getQuizzes() {
-        return "all available quizzes";
+    public @ResponseBody
+    List<String> getQuizzes() {
+        return personService.getQuizzes();
     }
 
-//    @PostMapping
-//    @ResponseBody
-//    public String runQuiz(@RequestBody RunQuizApplication application) {
-//        return "run";
-//    }
+    @GetMapping("/get_statistics/{id}")
+    public @ResponseBody
+    Long getStatistics(@PathVariable Long id) {
+        return id;
+    }
 
-    @GetMapping("/get_statistics/{id}/{name}")
-    public String getStatistics(@PathVariable Long id, String name) {
-        return "ok";
+    @PostMapping("/run_quiz")
+    @ResponseBody
+    public void runQuiz(@RequestBody RunQuizDto runQuizDto) {
+        personService.runQuiz(runQuizDto);
     }
 }

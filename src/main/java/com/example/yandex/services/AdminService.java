@@ -25,7 +25,7 @@ public class AdminService {
             for (Question question : quizDto.getQuestions()) {
                 question.setId(UUID.randomUUID());
             }
-            data.add(new Quiz(UUID.randomUUID(), quizDto.getName(), quizDto.getQuestions(), quizDto.getStart(), quizDto.getEnd()));
+            data.add(new Quiz(UUID.randomUUID(), quizDto.getName(), quizDto.getQuestions()));
             logger.info("Администратор добавил квиз с названием " + quizDto.getName());
         }
         dataService.writeValue(data);

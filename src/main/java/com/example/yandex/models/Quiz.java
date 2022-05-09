@@ -17,7 +17,4 @@ public class Quiz {
     private UUID id;
     private String name;
     private List<Question> questions;
-    private LocalDateTime start;
-    private LocalDateTime end;
-
 }

@@ -3,6 +3,7 @@ package com.example.yandex.services;
 import com.example.yandex.models.Quiz;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class DataService implements Data {
     private ObjectMapper mapper;
 
     private static final Logger logger = LoggerFactory.getLogger(DataService.class);
+
 
 
     @Override
