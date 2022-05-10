@@ -30,7 +30,7 @@ public class PersonService {
     }
 
 
-    // TODO: 07.05.2022 созранять в logData.json истрию
+    // TODO: 07.05.2022 созранять в logData.json историю
     // TODO: 07.05.2022 проверять ответы и выдавать результат
     public int runQuiz(RunQuizDto runQuizDto) {
         return 0;
