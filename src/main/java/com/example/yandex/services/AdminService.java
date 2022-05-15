@@ -3,9 +3,12 @@ package com.example.yandex.services;
 import com.example.yandex.models.Question;
 import com.example.yandex.models.Quiz;
 import com.example.yandex.models.dto.*;
+import com.fasterxml.jackson.core.type.TypeReference;
+import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,8 +19,13 @@ public class AdminService {
 
     private static final Logger logger = LoggerFactory.getLogger(AdminService.class);
 
+    @Qualifier("dataService")
+    private final DataService<Quiz> dataService;
+
     @Autowired
-    private Data dataService;
+    public AdminService(DataService<Quiz> dataService) {
+        this.dataService = dataService;
+    }
 
     public void addQuiz(List<QuizDto> quizDtos) {
         List<Quiz> data = dataService.readValue();
@@ -74,6 +82,7 @@ public class AdminService {
         return false;
 
     }
+
 
     public boolean addQuestions(QuestionsDto questionDtos) {
         List<Quiz> data = dataService.readValue();

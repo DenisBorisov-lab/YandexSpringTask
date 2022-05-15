@@ -15,8 +15,12 @@ import java.util.UUID;
 @Controller
 public class AdminController {
 
-    @Autowired
     private AdminService adminService;
+
+    @Autowired
+    public AdminController(AdminService adminService) {
+        this.adminService = adminService;
+    }
 
 
     @PostMapping("/add_quiz")
@@ -66,9 +70,9 @@ public class AdminController {
     @ResponseBody
     public String edit_question(@RequestBody EditQuestionDto editQuestionDto) {
         boolean result = adminService.editQuestion(editQuestionDto);
-        if (result){
+        if (result) {
             return "ok";
-        }else{
+        } else {
             return "Не удалось изменить вопрос!";
         }
 
@@ -78,9 +82,9 @@ public class AdminController {
     @ResponseBody
     public String delete_question(@RequestBody DeleteQuestionDto deleteQuestionDto) {
         boolean result = adminService.deleteQuestion(deleteQuestionDto);
-        if (result){
+        if (result) {
             return "ok";
-        }else{
+        } else {
             return "Не получилось удалить вопрос";
         }
     }

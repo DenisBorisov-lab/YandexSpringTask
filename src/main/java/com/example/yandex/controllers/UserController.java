@@ -1,6 +1,7 @@
 package com.example.yandex.controllers;
 
-import com.example.yandex.models.dto.RunQuizDto;
+import com.example.yandex.models.UserAnswer;
+import com.example.yandex.models.dto.UserAnswersDto;
 import com.example.yandex.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,13 +23,18 @@ public class UserController {
 
     @GetMapping("/get_statistics/{id}")
     public @ResponseBody
-    Long getStatistics(@PathVariable Long id) {
-        return id;
+    String getStatistics(@PathVariable Long id) {
+        UserAnswer statistics = personService.getStatistics(id);
+        if (statistics != null){
+            return statistics.toString();
+        }else{
+            return "Вы ещё не проходили опросов!";
+        }
     }
 
     @PostMapping("/run_quiz")
     @ResponseBody
-    public void runQuiz(@RequestBody RunQuizDto runQuizDto) {
-        personService.runQuiz(runQuizDto);
+    public String runQuiz(@RequestBody UserAnswersDto userAnswersDto) {
+        return personService.runQuiz(userAnswersDto);
     }
 }

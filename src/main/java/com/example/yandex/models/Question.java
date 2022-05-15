@@ -11,9 +11,17 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Question <T> {
+public class Question {
     private UUID id;
     private String message;
-    private T correctAnswer;
+    private String correctAnswer;
     private Type type;
+
+    @Override
+    public String toString() {
+        return "Question{" + "\n" +
+                "message='" + message + "\n" +
+                ", correctAnswer='" + correctAnswer + "\n" +
+                "}";
+    }
 }

@@ -4,8 +4,8 @@ import com.example.yandex.models.Type;
 import lombok.Getter;
 
 @Getter
-public class QuestionDto<T> {
+public class QuestionDto {
     private String message;
-    private T correctAnswer;
+    private String correctAnswer;
     private Type type;
 }

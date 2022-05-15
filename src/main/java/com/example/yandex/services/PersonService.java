@@ -1,10 +1,12 @@
 package com.example.yandex.services;
 
 import com.example.yandex.models.Quiz;
-import com.example.yandex.models.dto.RunQuizDto;
+import com.example.yandex.models.UserAnswer;
+import com.example.yandex.models.dto.UserAnswersDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,10 +16,20 @@ import java.util.List;
 @Service
 public class PersonService {
 
-    private Logger logger = LoggerFactory.getLogger(PersonService.class);
+    private final Logger logger = LoggerFactory.getLogger(PersonService.class);
+    @Qualifier("dataService")
+    private final DataService<Quiz> dataService;
+    @Qualifier("LogDataService")
+    private final DataService<UserAnswer> logDataService;
+    private UserScoringService userScoringService;
 
     @Autowired
-    private Data dataService;
+    public PersonService(DataService<Quiz> dataService, DataService<UserAnswer> logDataService, UserScoringService userScoringService) {
+        this.dataService = dataService;
+        this.logDataService = logDataService;
+        this.userScoringService = userScoringService;
+    }
+
 
     public List<String> getQuizzes() {
         List<Quiz> data = dataService.readValue();
@@ -29,11 +41,26 @@ public class PersonService {
         return names;
     }
 
+    public String runQuiz(UserAnswersDto userAnswersDto) {
+        List<UserAnswer> data = logDataService.readValue();
+        UserAnswer answer = userScoringService.enrichUserAnswer(userAnswersDto);
+        data.add(answer);
+        int score = answer.getScore();
+        int amountOfQuestions = answer.getInfo().size();
+        logDataService.writeValue(data);
+        logger.info("Пользователь " + answer.getUserId() + " прошёл опрос");
+        return new StringBuilder().append(score).append(" / ").append(amountOfQuestions).toString();
+    }
 
-    // TODO: 07.05.2022 созранять в logData.json историю
-    // TODO: 07.05.2022 проверять ответы и выдавать результат
-    public int runQuiz(RunQuizDto runQuizDto) {
-        return 0;
+    public UserAnswer getStatistics(Long id) {
+        List<UserAnswer> data = logDataService.readValue();
+        for (UserAnswer answer : data) {
+            if (answer.getUserId().equals(id)) {
+                logger.info("Пользователь " + id + " запросил информацию о пройденных опросах");
+                return answer;
+            }
+        }
+        return null;
     }
 
 

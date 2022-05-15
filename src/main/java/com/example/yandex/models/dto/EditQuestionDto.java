@@ -6,10 +6,10 @@ import lombok.Getter;
 import java.util.UUID;
 
 @Getter
-public class EditQuestionDto <T> {
+public class EditQuestionDto {
     private UUID quizId;
     private UUID id;
     private String message;
-    private T correctAnswer;
+    private String correctAnswer;
     private Type type;
 }
