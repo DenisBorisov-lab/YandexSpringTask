@@ -16,23 +16,5 @@
         "type": "TEXT"
       }
     ]
-  },
-  {
-    "id": "9905d75c-9dea-4042-90c5-9e306938dd41",
-    "name": "name",
-    "questions": [
-      {
-        "id": "7f936c4d-cb29-4801-81d4-d66c78a67a05",
-        "message": "message",
-        "correctAnswer": "CHECKBOX",
-        "type": "TEXT"
-      },
-      {
-        "id": "7266355d-2324-4eea-a77f-014b8c0f778b",
-        "message": "message",
-        "correctAnswer": "CHECKBOX",
-        "type": "SELECT_BOX"
-      }
-    ]
   }
 ]

@@ -18,7 +18,7 @@ public class QuizInfoDto {
     public String toString() {
         return "QuizInfoDto{" + "\n" +
                 "question=" + question + "\n" +
-                ", givenAnswer='" + givenAnswer  + "\n" +
+                ", givenAnswer='" + givenAnswer + "\n" +
                 "}";
     }
 }

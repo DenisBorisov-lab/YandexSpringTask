@@ -21,7 +21,7 @@ public class PersonService {
     private final DataService<Quiz> dataService;
     @Qualifier("LogDataService")
     private final DataService<UserAnswer> logDataService;
-    private UserScoringService userScoringService;
+    private final UserScoringService userScoringService;
 
     @Autowired
     public PersonService(DataService<Quiz> dataService, DataService<UserAnswer> logDataService, UserScoringService userScoringService) {
@@ -52,15 +52,16 @@ public class PersonService {
         return new StringBuilder().append(score).append(" / ").append(amountOfQuestions).toString();
     }
 
-    public UserAnswer getStatistics(Long id) {
+    public List<UserAnswer> getStatistics(Long id) {
         List<UserAnswer> data = logDataService.readValue();
+        List<UserAnswer> usersAnswer = new ArrayList<>();
         for (UserAnswer answer : data) {
             if (answer.getUserId().equals(id)) {
                 logger.info("Пользователь " + id + " запросил информацию о пройденных опросах");
-                return answer;
+                usersAnswer.add(answer);
             }
         }
-        return null;
+        return usersAnswer;
     }
 
 

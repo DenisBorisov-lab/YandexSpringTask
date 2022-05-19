@@ -1,1 +1,191 @@
-[]
+[
+  {
+    "userId": 12345,
+    "quizId": "fa377339-d4fd-4588-a3d7-6e552cf5a260",
+    "start": "2022-05-19T20:42:13",
+    "end": "2022-05-19T20:42:13",
+    "score": 2,
+    "info": [
+      {
+        "question": {
+          "id": "c6a5f118-e28e-4b88-8075-faf923c4ec39",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "CHECKBOX"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "c6a5f118-e28e-4b88-8075-faf923c4ec39",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "CHECKBOX"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "bce15981-bd53-4e7c-9b62-60ece8061e20",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "TEXT"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "bce15981-bd53-4e7c-9b62-60ece8061e20",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "TEXT"
+        },
+        "givenAnswer": "CHECKBOX"
+      }
+    ]
+  },
+  {
+    "userId": 12345,
+    "quizId": "fa377339-d4fd-4588-a3d7-6e552cf5a260",
+    "start": "2022-05-19T20:42:13",
+    "end": "2022-05-19T20:42:13",
+    "score": 2,
+    "info": [
+      {
+        "question": {
+          "id": "c6a5f118-e28e-4b88-8075-faf923c4ec39",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "CHECKBOX"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "c6a5f118-e28e-4b88-8075-faf923c4ec39",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "CHECKBOX"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "bce15981-bd53-4e7c-9b62-60ece8061e20",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "TEXT"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "bce15981-bd53-4e7c-9b62-60ece8061e20",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "TEXT"
+        },
+        "givenAnswer": "CHECKBOX"
+      }
+    ]
+  },
+  {
+    "userId": 12345,
+    "quizId": "fa377339-d4fd-4588-a3d7-6e552cf5a260",
+    "start": "2022-05-19T20:42:13",
+    "end": "2022-05-19T20:42:13",
+    "score": 2,
+    "info": [
+      {
+        "question": {
+          "id": "c6a5f118-e28e-4b88-8075-faf923c4ec39",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "CHECKBOX"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "c6a5f118-e28e-4b88-8075-faf923c4ec39",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "CHECKBOX"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "bce15981-bd53-4e7c-9b62-60ece8061e20",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "TEXT"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "bce15981-bd53-4e7c-9b62-60ece8061e20",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "TEXT"
+        },
+        "givenAnswer": "CHECKBOX"
+      }
+    ]
+  },
+  {
+    "userId": 12345,
+    "quizId": "fa377339-d4fd-4588-a3d7-6e552cf5a260",
+    "start": "2022-05-19T20:42:13",
+    "end": "2022-05-19T20:42:13",
+    "score": 2,
+    "info": [
+      {
+        "question": {
+          "id": "c6a5f118-e28e-4b88-8075-faf923c4ec39",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "CHECKBOX"
+        },
+        "givenAnswer": "CHECKBOX"
+      },
+      {
+        "question": {
+          "id": "bce15981-bd53-4e7c-9b62-60ece8061e20",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "TEXT"
+        },
+        "givenAnswer": "CHECKBOX"
+      }
+    ]
+  },
+  {
+    "userId": 12345,
+    "quizId": "fa377339-d4fd-4588-a3d7-6e552cf5a260",
+    "start": "2022-05-19T20:42:13",
+    "end": "2022-05-19T20:42:13",
+    "score": 1,
+    "info": [
+      {
+        "question": {
+          "id": "c6a5f118-e28e-4b88-8075-faf923c4ec39",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "CHECKBOX"
+        },
+        "givenAnswer": "флдаофлдоад"
+      },
+      {
+        "question": {
+          "id": "bce15981-bd53-4e7c-9b62-60ece8061e20",
+          "message": "message",
+          "correctAnswer": "CHECKBOX",
+          "type": "TEXT"
+        },
+        "givenAnswer": "CHECKBOX"
+      }
+    ]
+  }
+]

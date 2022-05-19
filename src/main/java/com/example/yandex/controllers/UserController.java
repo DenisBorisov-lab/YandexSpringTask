@@ -23,13 +23,8 @@ public class UserController {
 
     @GetMapping("/get_statistics/{id}")
     public @ResponseBody
-    String getStatistics(@PathVariable Long id) {
-        UserAnswer statistics = personService.getStatistics(id);
-        if (statistics != null){
-            return statistics.toString();
-        }else{
-            return "Вы ещё не проходили опросов!";
-        }
+    List<UserAnswer> getStatistics(@PathVariable Long id) {
+        return personService.getStatistics(id);
     }
 
     @PostMapping("/run_quiz")

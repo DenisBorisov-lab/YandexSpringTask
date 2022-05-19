@@ -1,7 +1,10 @@
 package com.example.yandex.models;
 
 import com.example.yandex.models.dto.QuizInfoDto;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -21,12 +24,10 @@ public class UserAnswer {
 
     @Override
     public String toString() {
-        return "UserAnswer{" + "\n" +
-                "userId=" + userId + "\n" +
-                ", start=" + start + "\n" +
-                ", end=" + end + "\n" +
-                ", score=" + score + "\n" +
-                ", info=" + info + "\n" +
-                '}';
+        return "userId=" + userId + ", \n" +
+                "start=" + start + ", \n" +
+                "end=" + end + ", \n" +
+                "score=" + score + ", \n" +
+                "info=" + info;
     }
 }
