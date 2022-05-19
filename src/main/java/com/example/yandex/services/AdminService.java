@@ -3,8 +3,6 @@ package com.example.yandex.services;
 import com.example.yandex.models.Question;
 import com.example.yandex.models.Quiz;
 import com.example.yandex.models.dto.*;
-import com.fasterxml.jackson.core.type.TypeReference;
-import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -28,15 +28,16 @@ public class UserScoringService {
         Map<UUID, String> answers = answer.getAnswers();
         Set<UUID> questionIds = answers.keySet();
         for (Quiz quiz : quizzes) {
-            if (quiz.getId().equals(quizId)){
-                for(Question question : quiz.getQuestions()){
-                    for (UUID id : questionIds){
-                        if (question.getId().equals(id)){
-                            if (answers.get(id).equals(question.getCorrectAnswer())){
+            if (quiz.getId().equals(quizId)) {
+                for (Question question : quiz.getQuestions()) {
+                    for (UUID id : questionIds) {
+                        if (question.getId().equals(id)) {
+                            if (answers.get(id).equals(question.getCorrectAnswer())) {
                                 score++;
                             }
+                            info.add(new QuizInfoDto(question, answers.get(id)));
                         }
-                        info.add(new QuizInfoDto(question, answers.get(id)));
+
                     }
                 }
             }

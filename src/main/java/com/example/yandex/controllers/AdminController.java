@@ -5,6 +5,7 @@ import com.example.yandex.services.AdminService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,7 +16,7 @@ import java.util.UUID;
 @Controller
 public class AdminController {
 
-    private AdminService adminService;
+    private final AdminService adminService;
 
     @Autowired
     public AdminController(AdminService adminService) {
@@ -43,10 +44,9 @@ public class AdminController {
 
     }
 
-    @PostMapping("/delete_quiz")
+    @PostMapping("/delete_quiz/{id}")
     @ResponseBody
-    public String deleteQuiz(@RequestBody DeleteQuizDto deleteQuizDto) {
-        UUID id = deleteQuizDto.getId();
+    public String deleteQuiz(@PathVariable UUID id) {
         boolean result = adminService.deleteQuiz(id);
         if (result) {
             return "ок";
