@@ -19,7 +19,7 @@ public class PersonService {
     private final Logger logger = LoggerFactory.getLogger(PersonService.class);
     @Qualifier("dataService")
     private final DataService<Quiz> dataService;
-    @Qualifier("LogDataService")
+    @Qualifier("logDataService")
     private final DataService<UserAnswer> logDataService;
     private final UserScoringService userScoringService;
 
