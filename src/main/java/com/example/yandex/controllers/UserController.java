@@ -3,32 +3,30 @@ package com.example.yandex.controllers;
 import com.example.yandex.models.UserAnswer;
 import com.example.yandex.models.dto.UserAnswersDto;
 import com.example.yandex.services.PersonService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
+@Tag(name = "user-controller", description = "API for common users")
 public class UserController {
 
     @Autowired
     private PersonService personService;
 
     @GetMapping("/get_quizzes")
-    public @ResponseBody
-    List<String> getQuizzes() {
+    public List<String> getQuizzes() {
         return personService.getQuizzes();
     }
 
     @GetMapping("/get_statistics/{id}")
-    public @ResponseBody
-    List<UserAnswer> getStatistics(@PathVariable Long id) {
+    public List<UserAnswer> getStatistics(@PathVariable Long id) {
         return personService.getStatistics(id);
     }
 
     @PostMapping("/run_quiz")
-    @ResponseBody
     public String runQuiz(@RequestBody UserAnswersDto userAnswersDto) {
         return personService.runQuiz(userAnswersDto);
     }
